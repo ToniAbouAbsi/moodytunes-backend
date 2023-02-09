@@ -5,7 +5,7 @@ import authRoutes from './routes/auth.js';
 const app = express();
 
 const corsOptions = {
-  origin: 'https://moodytunes.onrender.com',
+  origin: 'http://localhost:3000',
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -16,5 +16,5 @@ app.listen(8800, () => {
 });
 
 app.use(express.json());
-app.use(cors({ origin: 'https://moodytunes.onrender.com' }));
+app.use(cors({ origin: 'http://localhost:3000' }));
 app.use('/api/auth', authRoutes);
